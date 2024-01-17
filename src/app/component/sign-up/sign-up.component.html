@@ -1,0 +1,42 @@
+<form class="flex flex-col gap-6 items-center w-[350px] h-[400px] bg-green-400 rounded-lg mx-auto justify-center my-10" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="username">Username:</label>
+      <input class="w-[200px] h-[40px] bg-slate-200" type="text" id="username" formControlName="username">
+      <div *ngIf="userForm.get('username')?.hasError('required') && userForm.get('username')?.touched">
+        Username is required.
+      </div>
+      <div *ngIf="userForm.get('username')?.hasError('minlength') && userForm.get('username')?.touched">
+        Username must be at least 3 characters long.
+      </div>
+    </div>
+  
+ 
+  
+    <div>
+      <label for="email">Email:</label>
+      <input  class="w-[200px] h-[40px] bg-slate-200" type="email" id="email" formControlName="email">
+      <div *ngIf="userForm.get('email')?.hasError('required') && userForm.get('email')?.touched">
+        Email is required.
+      </div>
+      <div *ngIf="userForm.get('email')?.hasError('email') && userForm.get('email')?.touched">
+        Please enter a valid email address.
+      </div>
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input  class="w-[200px] h-[40px] bg-slate-200" type="password" id="password" formControlName="password">
+        <div *ngIf="userForm.get('password')?.hasError('required') && userForm.get('password')?.touched">
+          Password is required.
+        </div>
+        <div *ngIf="userForm.get('password')?.hasError('minlength') && userForm.get('password')?.touched">
+          Password must be at least 6 characters long.
+        </div>
+      </div>
+  
+    <button type="submit" [disabled]="userForm.invalid">Submit</button>
+    <div class="flex flex-row">
+      <p>Already have account?</p>
+      <button class="text-cyan-600" routerLink="/login">Login</button>
+    </div>
+  </form>
+  

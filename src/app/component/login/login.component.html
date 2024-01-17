@@ -1,0 +1,26 @@
+<div class="flex  items-center w-[350px] h-[400px] bg-green-400 rounded-lg mx-auto justify-center my-10">
+    <form class="flex flex-col gap-5" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <div>
+          <label for="email">Email:</label>
+          <input class="w-[200px] h-[40px] bg-slate-200" type="email" id="email" formControlName="email">
+          <div *ngIf="loginForm.get('email')?.hasError('required') && loginForm.get('email')?.touched">
+            Email is required.
+          </div>
+          <div *ngIf="loginForm.get('email')?.hasError('email') && loginForm.get('email')?.touched">
+            Please enter a valid email address.
+          </div>
+        </div>
+      
+        <div>
+          <label for="password">Password:</label>
+          <input class="w-[200px] h-[40px] bg-slate-200" type="password" id="password" formControlName="password">
+          <div *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched">
+            Password is required.
+          </div>
+        </div>
+      
+        <button type="submit" [disabled]="loginForm.invalid">Login</button>
+      </form>
+</div>
+
+  

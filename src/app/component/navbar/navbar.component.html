@@ -1,0 +1,102 @@
+<div class="bg-white flex justify-center">
+   
+    <nav class="fixed top-0 left-0 z-20 w-screen border-b border-gray-200 bg-white py-2.5 px-6 sm:px-4"> 
+     <div class="container mx-auto flex max-w-screen-2xl flex-wrap items-center gap-48">
+      <a href="#" class="flex items-center gap-5">
+        <img class="w-10" src="../../../assets/linkedin.png" alt="">
+       <input class="w-[250px] h-10 bg-slate-200 rounded-md pl-4 " type="text"   placeholder="search " >
+
+      </a>
+      <div class="flex flex-col">
+      <div class="mt-2 SM:mt-0 flex  items-center gap-8 MD:order-2 ">
+        <li class="list-none flex flex-col items-center">
+            <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+                <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+              </svg>
+            </p>
+            <p class="text-sm">Home</p>
+        </li>
+        <li class="list-none flex flex-col items-center">
+            <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                <path d="M12 16v6H3v-6a3 3 0 013-3h3a3 3 0 013 3zm5.5-3A3.5 3.5 0 1014 9.5a3.5 3.5 0 003.5 3.5zm1 2h-2a2.5 2.5 0 00-2.5 2.5V22h7v-4.5a2.5 2.5 0 00-2.5-2.5zM7.5 2A4.5 4.5 0 1012 6.5 4.49 4.49 0 007.5 2z"></path>
+              </svg>
+            </p>
+            <p class="text-sm">My network</p>
+        </li>
+        <li class="list-none flex flex-col items-center">
+            <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                <path d="M22.84 10.22L21 6h-3.95V5a3 3 0 00-3-3h-4a3 3 0 00-3 3v1H2l2.22 5.18A3 3 0 007 13h14a2 2 0 001.84-2.78zM15.05 6h-6V5a1 1 0 011-1h4a1 1 0 011 1zM7 14h15v3a3 3 0 01-3 3H5a3 3 0 01-3-3V8.54l1.3 3A4 4 0 007 14z"></path>
+              </svg>
+            </p>
+            <p class="text-sm">Job</p>
+        </li>
+        <li class="list-none flex flex-col items-center">
+            <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                <path d="M22 8a6 6 0 01-3 5.22A7 7 0 0012 7H8a7 7 0 00-1.95.28A6 6 0 0112 2h4a6 6 0 016 6zm-4 6v.48a6 6 0 01-2.69 5L10 23v-3H8A6 6 0 018 8h4a6 6 0 016 6zM8 14a1 1 0 10-1 1 1 1 0 001-1zm3 0a1 1 0 10-1 1 1 1 0 001-1zm3 0a1 1 0 10-1 1 1 1 0 001-1z"></path>
+               </svg>
+            </p>
+           <p class="text-sm">Message</p>
+        </li>
+        <li class="list-none flex flex-col items-center">
+          <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+            <path d="M22 19h-8.28a2 2 0 11-3.44 0H2v-1a4.52 4.52 0 011.17-2.83l1-1.17h15.7l1 1.17A4.42 4.42 0 0122 18zM18.21 7.44A6.27 6.27 0 0012 2a6.27 6.27 0 00-6.21 5.44L5 13h14z"></path>
+            </svg>
+           </p>
+           <p class="text-sm">Notification</p>
+        </li>
+
+        <div>
+            <li class="list-none flex flex-col items-center relative">
+                <button *ngIf="isSmallScreen" (click)="toggleMenu()" type="button" class="inline-flex items-center rounded-lg  text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="navbar-sticky" aria-expanded="false">
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7">
+                    <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
+                 </svg>
+                   
+                </button> 
+               <p class="text-sm">Me</p>
+            </li>
+            <div  [class.hidden]="!isMenuOpen"  class="flex flex-col  w-[280px] h-[400px] bg-slate-200 rounded-md MD:order-1 MD:flex MD:w-auto absolute top-20" id="navbar-sticky">
+               <div class="flex gap-6 pt-4 pl-4">
+                <app-profile-img [width]="'w-14 h-14 rounded-full object-fill  '"></app-profile-img>
+                 <li class="list-none flex flex-col">
+                     <p class="font-bold">sarbas</p>
+                     <p>Title</p>
+
+                 </li>               
+                </div>
+                <button class="w-[250px] h-18 border-[2px] border-blue-500 text-blue-500 rounded-full ml-4 mt-3" routerLink="/profile">View Profile </button>
+               
+                <hr class="border-slate-400 mt-3">
+                <div class="pl-4 flex flex-col gap-1 pt-1">
+                  <p class="font-bold">Account</p>
+                  <p class="text-slate-500">Try premium for free</p>
+                  <p class="text-slate-500">Setting & Privacy</p>
+                  <p class="text-slate-500">Help</p>
+                  <p class="text-slate-500">Language</p>
+                </div>
+                <hr class="border-slate-400 pt-1">
+                <div class="pl-4 flex flex-col gap-1 pb-1">
+                  <p class="font-bold">Manage</p>
+                  <p class="text-slate-500">Posts & Activity</p>
+                  <p class="text-slate-500">Job Posting Account</p>
+                </div>
+                <hr class="border-slate-400">
+                <p class="text-slate-500 pl-4 pt-2">Sign Out</p>
+            </div>
+        </div>
+        <li class="list-none flex flex-col items-center relative">
+           <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+            <path d="M3 3h4v4H3zm7 4h4V3h-4zm7-4v4h4V3zM3 14h4v-4H3zm7 0h4v-4h-4zm7 0h4v-4h-4zM3 21h4v-4H3zm7 0h4v-4h-4zm7 0h4v-4h-4z"></path>
+          </svg></p>
+           <p class="text-sm">For Business</p>
+        </li>
+        
+   
+    </div>
+  
+    </div>
+   </div>
+  </nav>
+     
+</div>
