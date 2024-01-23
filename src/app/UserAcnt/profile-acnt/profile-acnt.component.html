@@ -1,11 +1,41 @@
-<app-navbar></app-navbar>
+<!-- <app-navbar></app-navbar> -->
 <main class="flex flex-col items-center mt-24">
 <section>
-    <div class="w-[800px] h-[500px] bg-white rounded-lg">
-        <div>
-            <app-cover-photo></app-cover-photo>
-        </div>
+    <div class="flex flex-col lg:w-[800px] h-[600px] bg-white rounded-lg md:w-[600px]  "  >
+        <div class="h-[300px]">
+        <div class=" relative">
+           <!-- cover photo img -->
+            <app-cover-photo [width]="'flex justify-end pr-5 pt-4 '"></app-cover-photo>
+            <img class="w-[800px] h-[] rounded-md absolute top-0" src="../../../assets/55k1z8997gh8dwtihm11aajyq.svg" alt="">
+            <!-- Profile photo -->
+            <app-profile-img [width]="'w-[160px] h-[160px] rounded-full object-cover  absolute top-[130px] left-[20px] border-[5px] border-white'"></app-profile-img>
+            
+             </div>
+       </div>
+        <div class="grid grid-cols-2 pl-9  gap-9">
+            <div class="flex flex-col gap-1">
+                <div *ngFor="let user of userData">
+                    <ul class="flex flex-row gap-2">
+                        <p class="font-bold text-2xl">{{user.firstName}}</p>
+                        <p class="font-bold text-2xl">{{user.lastName}}</p>
 
+                    </ul>
+                    <p>{{user.headline}}</p>
+                    <p class="text-slate-400">kozhikode , kerala , india</p>
+                    <p class="text-blue-500 font-bold">408 connection</p>
+                </div>
+              
+                <div class="flex flex-row gap-2">
+                    <button class="w-[100px] h-[30px] bg-blue-600 rounded-full text-white font-bold">Open to</button>
+                    <button class="w-[180px] h-[30px] border-[2px] border-blue-500 rounded-full text-blue-500 font-bold">Add profile section</button>
+                    <button class="w-[80px] h-[30px] border-[2px] border-slate-400 rounded-full text-slate-500 font-bold">More</button>
+                </div>
+            </div>
+            <div class="flex justify-end pr-8  ">
+                <!-- Pencil svg -->
+                <app-pencil-svg routerLink="/fillUp"></app-pencil-svg>
+            </div>
+        </div>
     </div>
 </section>
 

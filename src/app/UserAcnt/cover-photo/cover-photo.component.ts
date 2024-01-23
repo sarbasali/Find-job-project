@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-cover-photo',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./cover-photo.component.scss']
 })
 export class CoverPhotoComponent {
+@Input() width=""
 
 }

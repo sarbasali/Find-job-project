@@ -11,6 +11,8 @@ import { ProfileIMGComponent } from './UserAcnt/profile-img/profile-img.componen
 import { HomePageComponent } from './component/home-page/home-page.component';
 import { ProfileAcntComponent } from './UserAcnt/profile-acnt/profile-acnt.component';
 import { CoverPhotoComponent } from './UserAcnt/cover-photo/cover-photo.component';
+import { PencilSvgComponent } from './component/pencil-svg/pencil-svg.component';
+import { FillUpComponent } from './component/fill-up/fill-up.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,9 @@ import { CoverPhotoComponent } from './UserAcnt/cover-photo/cover-photo.componen
     ProfileIMGComponent,
     HomePageComponent,
     ProfileAcntComponent,
-    CoverPhotoComponent
+    CoverPhotoComponent,
+    PencilSvgComponent,
+    FillUpComponent
   ],
   imports: [
     BrowserModule,
