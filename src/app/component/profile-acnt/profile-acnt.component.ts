@@ -10,6 +10,10 @@ export class ProfileAcntComponent {
   userData:any[]=[]
   constructor(private userDetailsService:UserDetailsService){}
   ngOnInit(){
-    this.userData = this.userDetailsService.getUserData();
+    this.userDetailsService.getUserData().subscribe(data=>{
+      this.userData=data
+      console.log('form data stored ', this.userData);
+      
+    })
   }
 }

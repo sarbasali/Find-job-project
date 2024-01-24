@@ -1,7 +1,7 @@
 <main class="flex items-center justify-center h-screen">
-    <div class="  w-[700px] h-[800px] bg-white rounded-xl  overflow-y-scroll  overflow-hidden">
+    <div class="w-[400px] sm:w-[500px] md:w-[650px] lg:w-[700px] h-[800px] bg-white rounded-xl  overflow-y-scroll  overflow-hidden">
        
-        <div class="fixed flex flex-row justify-between w-[700px] h-[70px] border-b-[1px] border-slate-200 p-4 bg-white rounded-xl">
+        <div class="fixed flex flex-row justify-between w-[400px] sm:w-[500px] md:w-[650px] lg:w-[700px] h-[70px] border-b-[1px] border-slate-200 p-4 bg-white rounded-xl">
             <p class="font-bold text-2xl ">Edit intro</p>
             <p routerLink="/profile"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -16,18 +16,18 @@
                     <div class="flex-col flex gap-5 pt-3">
                       <div class="flex flex-col  ">
                         <label class="text-slate-600" for="firstName">First name*</label>
-                        <input class="w-[600px] h-[30px] border-[2px] border-slate-500 rounded-md" type="text" id="firstName" formControlName="firstName">
+                        <input class="md:w-[500px] lg:w-[600px] h-[30px] border-[2px] border-slate-500 rounded-md" type="text" id="firstName" formControlName="firstName">
                         
                         
                       </div>
                       <div class="flex flex-col">
                         <label class="text-slate-600" for="lastName">Last name*</label>
-                        <input class="w-[600px] h-[30px] border-[2px] border-slate-500 rounded-md" type="text" id="lastName" formControlName="lastName">
+                        <input class="md:w-[500px] lg:w-[600px] h-[30px] border-[2px] border-slate-500 rounded-md" type="text" id="lastName" formControlName="lastName">
                         
                       </div>
                       <div class="flex flex-col">
                         <label class="text-slate-600" for="lastName">Additional name </label>
-                        <input class="w-[600px] h-[30px] border-[2px] border-slate-500 rounded-md" type="text" id="additionalName" formControlName="additionalName">
+                        <input class="md:w-[500px] lg:w-[600px] h-[30px] border-[2px] border-slate-500 rounded-md" type="text" id="additionalName" formControlName="additionalName">
                        
                       </div>
                     </div>     
@@ -43,7 +43,7 @@
 
                       <div class="flex flex-col">
                         <label class="text-slate-600" for="lastName">Pronouns </label>
-                        <select name="pronouns" id="" class="w-[600px] h-[30px] border-[2px] border-slate-500 rounded-md bg-none">
+                        <select name="pronouns" id="" class="md:w-[500px] lg:w-[600px] h-[30px] border-[2px] border-slate-500 rounded-md bg-none">
                           <optgroup >
                             <option value="she">Please select</option>                          
                             <option value="she">She/Her</option>
@@ -74,7 +74,7 @@
                     </div>  
                     <div class="flex flex-col  ">
                       <label class="text-slate-600" for="firstName">Headline*</label>
-                      <input class="w-[600px] h-[30px] border-[2px] border-slate-500 rounded-md" type="text" id="headline" formControlName="headline">
+                      <input class="md:w-[500px] lg:w-[600px] h-[30px] border-[2px] border-slate-500 rounded-md" type="text" id="headline" formControlName="headline">
                                          
                     </div>
                     <div>                    
@@ -84,7 +84,7 @@
                       <p class="font-bold"> Current position </p>
                       <div class="flex flex-col  ">
                         <label class="text-slate-600" for="firstName">Position*</label>
-                        <input class="w-[600px] h-[30px] border-[2px] border-slate-500 rounded-md" type="text" id="position" formControlName="position">
+                        <input class="md:w-[500px] lg:w-[600px] h-[30px] border-[2px] border-slate-500 rounded-md" type="text" id="position" formControlName="position">
                                            
                       </div>
                       <p class="font-bold text-blue-500">+ Add new position</p>
@@ -100,7 +100,7 @@
             </div>
             
           </div>
-          <div class="fixed flex justify-end bottom-12 w-[700px] h-[70px]  border-t-[1px] border-slate-200 p-4 bg-white rounded-lg">
+          <div class="fixed flex justify-end bottom-12 w-[400px] sm:w-[500px] md:w-[650px] lg:w-[700px] h-[70px]  border-t-[1px] border-slate-200 p-4 bg-white rounded-lg">
             <button class="w-20 h-10 rounded-lg bg-blue-500 text-white   " (click)="OnSubmit()">save</button>
           </div>
     </div>

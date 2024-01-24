@@ -4,7 +4,7 @@ import { SignUpComponent } from './component/sign-up/sign-up.component';
 import { LoginComponent } from './component/login/login.component';
 import { AuthGuard } from './authCheck/auth.guard';
 import { HomePageComponent } from './component/home-page/home-page.component';
-import { ProfileAcntComponent } from './UserAcnt/profile-acnt/profile-acnt.component';
+import { ProfileAcntComponent } from './component/profile-acnt/profile-acnt.component';
 import { FillUpComponent } from './component/fill-up/fill-up.component';
 
 const routes: Routes = [
