@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SignUpComponent } from './component/sign-up/sign-up.component';
-import { LoginComponent } from './component/login/login.component';
 import { AuthGuard } from './authCheck/auth.guard';
-import { HomePageComponent } from './component/home-page/home-page.component';
+import { FeedComponent } from './component/feed/feed.component';
+
 import { ProfileAcntComponent } from './component/profile-acnt/profile-acnt.component';
 import { FillUpComponent } from './component/fill-up/fill-up.component';
+import { SignUpComponent } from './module/authModule/components/sign-up/sign-up.component';
+import { LoginComponent } from './module/authModule/components/login/login.component';
 
 const routes: Routes = [
-  {path :'' , component:HomePageComponent},
-  {path :'home' , component:HomePageComponent},
+  {path :'' , component:FeedComponent},
+  {path :'home' , component:FeedComponent},
   {path :'login' , component :LoginComponent,canActivate:[AuthGuard] },
   {path: 'signup' , component:SignUpComponent},
   {path:'profile' , component:ProfileAcntComponent},

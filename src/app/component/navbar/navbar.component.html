@@ -61,7 +61,10 @@
                 <app-profile-img [width]="'w-14 h-14 rounded-full object-fill  '"></app-profile-img>
                  <li class="list-none flex flex-col">
                      <p class="font-bold">sarbas</p>
-                     <p>Title</p>
+                     <ul *ngFor="let user of userData">
+
+                       <p>{{user.headline}}</p>
+                     </ul>
 
                  </li>               
                 </div>

@@ -9,7 +9,7 @@ import { UserAuthService } from 'src/app/service/user-auth.service';
 export class SignUpComponent {
   userForm: FormGroup;
   details:any[]=[]
-  constructor(private formBuilder: FormBuilder, private signupDtails:UserAuthService) {
+  constructor(private formBuilder: FormBuilder, private userAuthService:UserAuthService) {
     this.userForm = this.formBuilder.group({
       username: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
@@ -18,13 +18,9 @@ export class SignUpComponent {
   }
 
   onSubmit() {
+    this.userAuthService.Register(this.userForm.value)
+    // this.userForm.reset();
 
-    if (this.userForm.valid) {
-      this.details.push(this.userForm.value)
-      localStorage.setItem('userDetails', JSON.stringify(this.details));   
-         console.log(this.details);
-      alert('signup success')
-      this.userForm.reset();
-    } 
+    
   }
 }
